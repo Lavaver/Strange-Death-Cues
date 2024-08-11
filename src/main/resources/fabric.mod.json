@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "strange-death-cues",
+  "version": "${version}",
+  "name": "Strange-Death-Cues",
+  "description": "奇奇怪怪的死亡提示，但似乎有点让人绷不住（",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/strange-death-cues/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "github.lavaver.client.strangecuesClient"
+    ],
+    "main": [
+      "github.lavaver.strangecues"
+    ]
+  },
+  "mixins": [
+    "strange-death-cues.mixins.json",
+    {
+      "config": "strange-death-cues.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
